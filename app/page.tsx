@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header";
 import WorkoutCard from "@/components/WorkoutCard";
+import WorkoutSelection from "@/components/WorkoutSelection";
 import { workouts } from "@/data/workouts";
 
 export default function Home() {
@@ -12,10 +13,7 @@ export default function Home() {
     <div>
       <Header />
 
-      <WorkoutCard
-        workout={workouts[0]}
-        handleClick={handleClick}
-      />
+      <WorkoutSelection handleClick={handleClick} />
     </div>
   )
 }
