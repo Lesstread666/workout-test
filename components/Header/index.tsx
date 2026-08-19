@@ -1,7 +1,7 @@
 const Header = () => {
     return (
-        <header>
-            <h1>Workout Timer</h1>
+        <header className="p-6 text-center">
+            <h1 className="text-4xl font-bold">Workout Timer</h1>
         </header>
     )
 }
