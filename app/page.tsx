@@ -14,20 +14,23 @@ export default function Home() {
   const handleClick = (workout: Workout) => { setSelectedWorkout(workout) }
 
   return (
-    <div>
-      <Header />
+    <main className="min-h-screen bg-black text-white px-4 py-8 sm:px-6">
+      <div className="mx-auto w-full max-w-6xl">
+        <Header />
 
-      {/* if user select workout -> display Active workout with its data and Go Back button to WorkoutSelection */}
-      {selectedWorkout ? (
-        <ActiveWorkout
-          workout={selectedWorkout}
-          goBack={() => { setSelectedWorkout(null) }} />
-      ) :
-        // else if nothing selected we display all workout cards
-        (
-          <WorkoutSelection handleClick={handleClick} />
-        )}
+        {/* if user select workout -> display Active workout with its data and Go Back button to WorkoutSelection */}
+        {selectedWorkout ? (
+          <ActiveWorkout
+            workout={selectedWorkout}
+            goBack={() => { setSelectedWorkout(null) }} />
+        ) :
+          // else if nothing selected we display all workout cards
+          (
+            <WorkoutSelection handleClick={handleClick} />
+          )}
 
-    </div>
+      </div>
+    </main>
+
   )
 }

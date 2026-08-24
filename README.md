@@ -24,3 +24,20 @@ Click the "go back" button to go back to the homepage, with all the workout sele
 ![started counting](public/images/timer.png)
 ---
 ![timer ends](public/images/victory.png)
+
+
+## Test Improvements
+
+The provided tests covered the main functionality well, but some areas could be improved.
+
+The WorkoutSelection tests only verify that the first workout card contains the correct workout name. A stronger test could check that all six workout cards display the correct data from the workouts array.
+
+The Home integration tests only select the first workout. An additional test could select another workout and verify that the correct workout name and timer value are shown in ActiveWorkout.
+
+Some tests use data-testid where accessible queries such as getByRole or getByText could be used instead.
+
+Responsive styling and visual appearance are not covered by the automated tests, so these were checked manually in the browser.
+
+## Additional Tests
+
+No additional tests were required to complete the application, as all provided tests covered the main required functionality.
